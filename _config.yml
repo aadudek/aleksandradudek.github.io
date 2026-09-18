@@ -1,8 +1,10 @@
 title: Aleksandra Dudek
+description: Personal website
 markdown: kramdown
-theme: minima
+theme: minimal
 
 header_pages:
+  - index.html
   - research.html
   - teaching.html
   - outreach.html
