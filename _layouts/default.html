@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">{{ site.title }}</div>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ '/research.html' | relative_url }}" {% if page.url == '/research.html' %}class="active"{% endif %}>Research</a>
+      <a href="{{ '/teaching.html' | relative_url }}" {% if page.url == '/teaching.html' %}class="active"{% endif %}>Teaching</a>
+      <a href="{{ '/outreach.html' | relative_url }}" {% if page.url == '/outreach.html' %}class="active"{% endif %}>Outreach</a>
+    </nav>
+  </header>
+
+  <main class="site-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+</body>
+</html>
